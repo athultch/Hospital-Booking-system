@@ -1,0 +1,5 @@
+db.sqlite3 
+djvenv/
+home/migrations
+home/__pycache__
+hospital/__pycache__

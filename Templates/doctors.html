@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+doctors
+{% endblock %}
+
+{% block content %}
+<h5 class="text-center ">Doctors </h5>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for doctor in doctors %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ doctor.doc_name }}</h5>
+                <p class="card-text">{{ doctor.doc_spec }}</p>
+                <p class="card-text">Department: {{ doctor.dep_name }}</p>
+                <img src="{{ doctor.doc_image.url }}" alt="{{ doctor.doc_name }}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">No doctors available.</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
