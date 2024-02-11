@@ -1,7 +1,9 @@
 step 1                    
     clone the project     
     git clone https://github.com/athultch/Hospital-Booking-system.git       
-    open the hospital file        
+    open the 
+Hospital-Booking-system
+ file        
 step 2                          
  Create Virtual Environment
 
@@ -19,6 +21,12 @@ step 3
  pip install -r requirements.txt
 
 step 4                           
+ python manage.py makemigrations                                  
+ python manage.py migrate
+
+step 5           
  python manage.py runserver
+
+
 
  
